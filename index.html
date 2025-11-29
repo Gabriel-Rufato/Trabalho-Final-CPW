@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -8,28 +9,22 @@
 </head>
 
 <body>
-  <div class="bg-video">
-    <video class="bg-video-el" autoplay muted loop playsinline preload="auto" title="background-video">
-      <source src="imagens/background.mp4" type="video/mp4">
-    </video>
+  <div class="bg-carousel" aria-hidden="true">
+    <div class="slide"></div>
+    <div class="slide"></div>
   </div>
-  <header>
-    <img src="imagens/rock -in-rio-logo.jpg" alt="Logo marca" width="100" height="80">
-    <h1> Rock in Rio</h1>
-  </header>
   <main>
-    <h2> Rock in Rio</h1>
+
+    <img class="rock-logo" src="imagens/rockrioheader.png" alt="rock in rio">
+
       <form action="cadastro/" method="post">
         <fieldset>
-          <legend>Login</legend>
+          <legend>Confirme sua presença</legend>
           <label for="nome">Nome completo:</label>
           <input type="text" id="nome" name="nome" required=""><br>
 
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required=""><br>
-
-          <label for="password">Senha:</label>
-          <input type="password" id="password" name="password" required="password"><br>
 
           <label for="numero">Número do ingresso:</label>
           <input type="int" id="int" name="int"><br>
@@ -39,25 +34,44 @@
 
           <p>Selecione o dia para confirmar presença:</p>
           
-          <label for="dia1"> 04/09</label><br>
-          <input type="checkbox" id="dia1" name="dia1" value="dia1">
-          <label for="dia2"> 04/09</label><br>
-          <input type="checkbox" id="dia2" name="dia2" value="dia2">
-          <label for="dia3"> 05/09</label><br>
-          <input type="checkbox" id="dia3" name="dia3" value="dia3">
-          <label for="dia4"> 06/09</label><br>
-          <input type="checkbox" id="dia4" name="dia4" value="dia4">
-          <label for="dia5"> 07/09</label><br>
-          <input type="checkbox" id="dia5" name="dia5" value="dia5">
-          <label for="dia6"> 11/09</label><br>
-          <input type="checkbox" id="dia6" name="dia6" value="dia6">
-          <label for="dia7"> 12/09</label><br>
-          <input type="checkbox" id="dia7" name="dia7" value="dia7">
+          <div class="checkbox-group">
+            <label for="dia1"> 03/09</label>
+            <input type="checkbox" id="dia1" name="dia1" value="dia1">
+          </div>
+          <div class="checkbox-group">
+            <label for="dia2"> 04/09</label>
+            <input type="checkbox" id="dia2" name="dia2" value="dia2">
+          </div>
+          <div class="checkbox-group">
+            <label for="dia3"> 05/09</label>
+            <input type="checkbox" id="dia3" name="dia3" value="dia3">
+          </div>
+          <div class="checkbox-group">
+            <label for="dia4"> 06/09</label>
+            <input type="checkbox" id="dia4" name="dia4" value="dia4">
+          </div>
+          <div class="checkbox-group">
+            <label for="dia5"> 07/09</label>
+            <input type="checkbox" id="dia5" name="dia5" value="dia5">
+          </div>
+          <div class="checkbox-group">
+            <label for="dia6"> 11/09</label>
+            <input type="checkbox" id="dia6" name="dia6" value="dia6">
+          </div>
+          <div class="checkbox-group">
+            <label for="dia7"> 12/09</label>
+            <input type="checkbox" id="dia7" name="dia7" value="dia7">
+          </div>
 
 
         </fieldset><button type="submit">Confirmar</button>
       </form>
   </main>
+
+<footer>
+  <p>© 2025 Site trabalho final de CPW. Nenhum direito reservado.</p>
+
+<script src="js/carousel.js"></script>
 
 </body>
 

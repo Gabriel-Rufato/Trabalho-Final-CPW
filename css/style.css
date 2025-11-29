@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +15,7 @@ body {
   background: transparent;
   color: #222;
   line-height: 1.6;
-  padding: 20px;
+  padding: 0;
   width: 100%;
   min-height: 100vh;
   position: relative;
@@ -22,11 +23,11 @@ body {
 }
 
 header {
-    background-color: #0257c579;
-    height: 100px;
-    margin: 20px;
-    border-radius: 20px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.85);
+  height: 100px;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 header img {
@@ -55,23 +56,24 @@ h2 {
 
 form {
   max-width: 450px;
-  background: #fff;
+  background: rgba(0, 0, 0, 0.85);
   margin: 0 auto;
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
 }
 legend {
   font-weight: bold;
   font-size: 1.2rem;
-  color: #9e0202;
+  color: #a0a0a0;
   padding: 0 8px
 }
 label {
   display: block;
   margin-top: 12px;
   font-weight: bold;
-  color: #222;
+  color: #a0a0a0;
 }
 input {
   width: 100%;
@@ -84,13 +86,28 @@ input {
 }
 input[type="checkbox"]{
   transform: scale(1.2);
-  margin-right: 5px;
-  margin-top: 10px;
+  margin-right: 0;
+  margin-left: 5px;
+  margin-top: 0;
+}
+
+.checkbox-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 15px;
+  margin-bottom: 6px;
+}
+
+.checkbox-group label {
+  display: inline;
+  margin-top: 0;
+  margin-right: 0;
 }
 p {
   margin-top: 15px;
   font-weight: bold;
-  color: #222;
+  color: #a0a0a0;
 }
 button {
   width: 100%;
@@ -120,17 +137,53 @@ section {
   overflow: hidden;
   z-index: -1;
 }
-.bg-video video,
-.bg-video .bg-video-el {
+.bg-carousel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+}
+.bg-carousel .slide {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
+  inset: 0;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  will-change: opacity;
+}
+.bg-carousel .slide.visible {
+  opacity: 1;
+}
+fieldset {
+  border: 2px solid #555;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+}
+.rock-logo {
+  display: block;
+  margin: 18px auto 10px auto;
+  max-width: 320px;
+  width: 70%;
   height: auto;
-  object-fit: cover;
-  pointer-events: none; 
-  background: #000;
+}
+
+@media (min-width: 900px) {
+  .rock-logo {
+    max-width: 420px;
+    width: 50%;
+  }
+}
+footer {
+  text-align: center;
+  padding: 15px;
+
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
