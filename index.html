@@ -27,10 +27,10 @@
           <input type="email" id="email" name="email" required=""><br>
 
           <label for="numero">Número do ingresso:</label>
-          <input type="int" id="int" name="int"><br>
+          <input type="number" id="ingresso" name="ingresso"><br>
 
           <label for="idade">Idade:</label>
-          <input type="int" id="int" name="int"><br>
+          <input type="number" id="idade" name="idade"><br>
 
           <p>Selecione o dia para confirmar presença:</p>
           
@@ -64,7 +64,8 @@
           </div>
 
 
-        </fieldset><button type="submit">Confirmar</button>
+        </fieldset>
+        <button type="button" onclick="validaForm()">Confirmar</button>
       </form>
   </main>
 
@@ -72,7 +73,7 @@
   <p>© 2025 Site trabalho final de CPW. Nenhum direito reservado.</p>
 
 <script src="carousel.js"></script>
-
+<script src="js/scripts.js"></script>
 </body>
 
 </html>
