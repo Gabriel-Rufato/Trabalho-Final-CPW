@@ -41,3 +41,10 @@ rockrioheader.png
 bg1
 bg2
 bg3
+
+---
+
+## 💼 Funções de cada integrante
+Marco-HTML
+Teodoro-CSS
+Gabriel-Java Script
