@@ -30,6 +30,7 @@ O sistema valida os dados inseridos (nome, email, idade, número do ingresso e e
 ---
 
 ## 📁 Estrutura do Projeto
+README
 index.html
 js/
 scripts.js
